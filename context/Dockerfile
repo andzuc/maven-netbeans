@@ -10,7 +10,7 @@ COPY --from=BASE / /
 RUN apt-get install -y --no-install-recommends \
     unzip gpg gpg-agent
 WORKDIR /opt
-ADD --link https://downloads.apache.org/netbeans/KEYS .
+COPY KEYS .
 ADD --link https://downloads.apache.org/netbeans/netbeans/20/netbeans-20-bin.zip.asc .
 ADD --link https://dlcdn.apache.org/netbeans/netbeans/20/netbeans-20-bin.zip .
 RUN export PRODUCT_TAR="$(ls -ct|head -1)" \

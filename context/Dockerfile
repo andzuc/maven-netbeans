@@ -32,4 +32,4 @@ USER netbeans
 # setup X environment
 WORKDIR /home/netbeans
 COPY xsetup.sh .
-ENTRYPOINT [ "/home/netbeans/xsetup.sh" ]
+ENTRYPOINT [ "/home/netbeans/xsetup.sh" , "/opt/netbeans/bin/netbeans" ]

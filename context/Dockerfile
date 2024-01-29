@@ -32,4 +32,5 @@ USER netbeans
 # setup X environment
 WORKDIR /home/netbeans
 COPY xsetup.sh .
-ENTRYPOINT [ "/home/netbeans/xsetup.sh" , "/opt/netbeans/bin/netbeans" ]
+ENV MAVEN_CONFIG="/home/netbeans/.m2"
+ENTRYPOINT [ "/usr/local/bin/mvn-entrypoint.sh", "/home/netbeans/xsetup.sh" , "/opt/netbeans/bin/netbeans" ]

@@ -6,4 +6,5 @@ docker run --rm -it --net=host \
        --env="DISPLAY" \
        --env="XAUTH0" \
        --entrypoint /bin/bash \
-       andzuc/maven-netbeans
+       andzuc/maven-netbeans \
+       -c "$*"

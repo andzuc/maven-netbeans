@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export XAUTH0="$(xauth nlist :0)"
+export XAUTH0="$(xauth nlist ${DISPLAY})"
 
 docker run --rm -d --net=host \
        --env="DISPLAY" \

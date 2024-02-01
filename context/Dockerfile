@@ -31,7 +31,7 @@ RUN useradd -m netbeans
 USER netbeans
 # setup X environment
 WORKDIR /home/netbeans
-RUN mkdir .m2 .netbeans bin dev
+RUN mkdir .m2 .netbeans bin dev /tmp/.X11-unix
 COPY xsetup.sh bin
 ENV MAVEN_CONFIG="/home/netbeans/.m2"
 ENTRYPOINT [ "/usr/local/bin/mvn-entrypoint.sh", "/home/netbeans/bin/xsetup.sh" , "/opt/netbeans/bin/netbeans" ]

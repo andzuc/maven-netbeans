@@ -7,4 +7,4 @@ docker run --rm -it \
        -v "$(pwd)":/usr/src/mymaven \
        -w /usr/src/mymaven \
        "${MVN_IMAGE}" \
-       -c "mvn $@"
+       -c "mvn $*"
